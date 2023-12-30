@@ -25,7 +25,7 @@ function App() {
   return (
     <>
         <div
-            className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat"
+            className="w-full h-screen  flex flex-wrap justify-center items-center bg-cover bg-no-repeat px-0 py-0"
             style={{
                 backgroundColor:'black',
             }}
@@ -61,10 +61,10 @@ function App() {
                             <InputBox
                                 label="To"
                                 
-                                amount={convertedAmountamount}
+                                amount={convertedAmount}
                                 currencyOption={options}
                                 onCurrencyChange={(currency)=>setTo(currency)}
-                                selectCurrency={from}
+                                selectCurrency={to}
                                 amountDisable
                             />
                         </div>
