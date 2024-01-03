@@ -9,7 +9,7 @@ export const todoSlice = createSlice({
     name:'todo',
     initialState,
     reducers:{
-        addTodo: (state,action)=>{
+        addTodo: (state,action)=>{ //we will get always these things 
             const todo = {
                 id: nanoid(),
                 text: action.payload
@@ -19,6 +19,9 @@ export const todoSlice = createSlice({
         removeTodo: (state,action)=>{
             state.todo = state.todo.filter((todo)=> todo.id !== action.payload)
         },
+        updateToDo : (state,action)=>{
+            state.todo = state.todo.filter((todo)=> todo.id !== action.payload)
+          }
     }
 })
 
