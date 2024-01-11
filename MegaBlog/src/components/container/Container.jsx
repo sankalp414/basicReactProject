@@ -1,10 +1,10 @@
 import React, { Children } from 'react'
 
-const container = () => {
+const Container = () => {
   return
     <div className='w-full max-w-7xl mx-auto'>{Children}</div>
     
    
 }
 
-export default container
+export default Container

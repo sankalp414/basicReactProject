@@ -9,7 +9,7 @@ export class AuthService{
     constructor(){
         this.client
             .setEndpoint(conf.appwriteUrl)
-            .setProject(conf.appwriteBucketId);
+            .setProject(conf.appwriteProjectId);
             this.account = new Account(this.client);
     }
 
@@ -32,7 +32,7 @@ export class AuthService{
            return  await this.account.createEmailSession(email,password);
             
         } catch (error) {
-            
+            throw error
         }
     }
     async getCurrentUser(){

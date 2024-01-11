@@ -1,5 +1,5 @@
 import React from 'react'
-import{Container,Logo,LogOutBtn} from '../index'
+import{Container,Logo,LogoutBtn} from '../index'
 import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
@@ -8,10 +8,11 @@ const Header = () => {
     const authStatus = useSelector((state)=> state.auth.status)
     const navigate = useNavigate()
 
-    const naItems =[
+    const navItems =[
         {
             name:'Home',
             slug:'/',
+            active: true,
         },
         {
             name: "Login",
@@ -56,7 +57,7 @@ const Header = () => {
                     </ul>
                     {authStatus && (
                         <li>
-                            <LogOutBtn/>
+                            <LogoutBtn/>
                         </li>
                     )}
                 </div>
