@@ -5,7 +5,7 @@ import AddTodo from './components/AddToDo'
 import Todos from './components/ToDos'
 
 function App() {
-  const [count, setCount] = useState(0)
+  
 
   return (
     <>
